@@ -1,0 +1,20 @@
+body {
+  background-color: rgb(189, 162, 216);
+  text-align: center;
+}
+.main-div {
+  width: 370px;
+  margin: 0 auto;
+  border: 1px solid black;
+  padding: 20px;
+  min-height: 350px;
+}
+.selector {
+  text-align: left;
+  padding: 10px;
+}
+.btn-div {
+  padding: 10px;
+}
+.btn {
+}
