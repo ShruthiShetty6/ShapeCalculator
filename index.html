@@ -7,11 +7,11 @@
   </head>
   <body>
       <div class="main-div">
-      <h1 id="header">Step 1 : Select your shape</h1>
-      <div>Please select the shape that would like to calculate the area of and press the button "Go to step 2"</div>
-      <div class="selector">
+      <h1 id="title">Step 1 : Select your shape</h1>
+      <div id="header">Please select the shape that would like to calculate the area of and press the button "Go to step 2"</div>
+      <div class="selector" id="selector">
           <div class="btn-div">
-      <input type="radio" id="rectangle" name="shape" value="Rectangle">
+      <input type="radio" id="rectangle" name="shape" value="Rectangle" checked>
       <label for="rectangle">Rectangle</label>
       </div>
       <div class="btn-div">
@@ -24,7 +24,9 @@
       <input type="radio" id="ellipse" name="shape" value="Ellipse">
       <label for="ellipse">Ellipse</label></div>
     </div>
-    <button class="btn"> Go to Step2</button>
+    <button class="btn" id="step1" onClick="doDisplay()"> Go to Step2</button>
+    <button class="btn" id="step2" onClick="gotoStep3()" style="display: none;"> Go to Step3</button>
+    <button class="btn" id="step3" onClick="gotoStep1()" style="display: none;">Start Over</button>
     </div>
       <script type="text/javascript"  src="index.js"></script>
 </body>

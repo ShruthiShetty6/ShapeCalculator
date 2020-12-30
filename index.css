@@ -17,4 +17,5 @@ body {
   padding: 10px;
 }
 .btn {
+    cursor: pointer;
 }
