@@ -54,6 +54,7 @@ ShapeFactory.prototype.createShape = function (options) {
 };
 
 function gotoStep2() {
+  // var mydata = JSON.parse(data);
   this.checkedValue = document.querySelector(
     'input[name="shape"]:checked'
   ).value;
@@ -79,14 +80,24 @@ function gotoStep3() {
     ". Below is your result";
   document.getElementById("step2").style.display = "none";
   document.getElementById("step3").style.display = "block";
-  let value1 = document.querySelector('[name="shapeValue"]').value;
-  let value2 = document.querySelector('[name="shapeSelectedValue"]').value;
+  //let value1 = document.querySelector('[name="shapeValue"]').value;
+  var id = this.checkedValue.toLowerCase() + "length";
+  var id1 = this.checkedValue.toLowerCase() + "breadth";
+  let value1 = document.getElementById(id).value;
+  let value2 = "";
+  if (
+    this.checkedValue.toLowerCase() === "rectangle" ||
+    this.checkedValue.toLowerCase() === "ellipse"
+  ) {
+    value2 = document.getElementById(id1).value;
+  }
+
   // Create an instance of our factory
   var shape = new ShapeFactory();
   this.areaofShape = shape.createShape({
     shapeType: this.checkedValue.toLowerCase(),
     length: value1,
-    breadth: value2,
+    breadth: value2 ? value2 : 0,
   });
   document.getElementById("area").style.display = "block";
   document.getElementById("area").innerHTML =
