@@ -17,5 +17,21 @@ body {
   padding: 10px;
 }
 .btn {
-    cursor: pointer;
+  cursor: pointer;
+  margin: 0 auto;
+}
+.input_div {
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
 }

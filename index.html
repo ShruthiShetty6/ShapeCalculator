@@ -11,22 +11,47 @@
       <div id="header">Please select the shape that would like to calculate the area of and press the button "Go to step 2"</div>
       <div class="selector" id="selector">
           <div class="btn-div">
-      <input type="radio" id="rectangle" name="shape" value="Rectangle" checked>
+      <input type="radio" id="0" name="shape" value="Rectangle" checked>
       <label for="rectangle">Rectangle</label>
       </div>
       <div class="btn-div">
-      <input type="radio" id="circle" name="shape" value="Circle">
+      <input type="radio" id="1" name="shape" value="Circle">
       <label for="circle">Circle</label></div>
       <div class="btn-div">
-      <input type="radio" id="sqaure" name="shape" value="Sqaure">
+      <input type="radio" id="2" name="shape" value="Sqaure">
       <label for="sqaure">Sqaure</label></div>
       <div class="btn-div">
-      <input type="radio" id="ellipse" name="shape" value="Ellipse">
+      <input type="radio" id="3" name="shape" value="Ellipse">
       <label for="ellipse">Ellipse</label></div>
     </div>
-    <button class="btn" id="step1" onClick="doDisplay()"> Go to Step2</button>
-    <button class="btn" id="step2" onClick="gotoStep3()" style="display: none;"> Go to Step3</button>
-    <button class="btn" id="step3" onClick="gotoStep1()" style="display: none;">Start Over</button>
+    <div id="rectangle" style="display: none;margin: 0 auto;" class="input_div">
+      <label for="rectangle">Length:</label>
+      <input type="number" name="shapeValue"/>
+      <br/>
+      <br/>
+      <label for="rectangle">Breadth:</label>
+      <input type="number" name="shapeSelectedValue"/>
+    </div>
+    <div id="circle" style="display: none;margin: 0 auto;" class="input_div">
+      <label for="circle">Diameter:</label>
+      <input type="number" name="shapeValue"/>
+    </div>
+    <div id="sqaure" style="display: none;margin: 0 auto;" class="input_div">
+      <label for="Sqaure">Side:</label>
+      <input type="number" name="shapeValue"/>
+    </div>
+    <div id="ellipse" style="display: none;margin: 0 auto;" class="input_div">
+      <label for="Ellipse">Major Axis:</label>
+      <input type="number" name="shapeValue"/>
+      <br/>
+      <br/>
+      <label for="Ellipse">Minor Axis:</label>
+      <input type="number" name="shapeSelectedValue"/>
+    </div>
+    <h1 id="area" style="display: none;" ></h1>
+    <button class="btn" id="step1" onClick="gotoStep2()"> Go to Step2</button>
+    <button class="btn" id="step2" onClick="gotoStep3()" style="display: none;margin: 0 auto;" > Go to Step3</button>
+    <button class="btn" id="step3" onClick="gotoStep1()" style="display: none;margin: 0 auto;">Start Over</button>
     </div>
       <script type="text/javascript"  src="index.js"></script>
 </body>
